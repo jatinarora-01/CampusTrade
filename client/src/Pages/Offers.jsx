@@ -14,6 +14,10 @@ const Offers = ({ userStatus, setUserStatus, setProducts, allProducts }) => {
     fetchOffers();
   }, [navigate]);
 
+  const handleChat = () => {
+    navigate("/chat");
+  };
+
   const fetchOffers = async () => {
     await fetch(
       `http://localhost:5000/products/get-products-by-seller?token=${localStorage.getItem(
@@ -94,6 +98,7 @@ const Offers = ({ userStatus, setUserStatus, setProducts, allProducts }) => {
                           <th className="px-4 py-2">Buyer Email</th>
                           <th className="px-4 w-1/2 py-2">Message</th>
                           <th className="px-4 py-2">Contact Number</th>
+                          <th className="px-4 py-2">Chat</th>
                           <th className="px-4 py-2">Sold</th>
                         </tr>
                       </thead>
@@ -110,6 +115,14 @@ const Offers = ({ userStatus, setUserStatus, setProducts, allProducts }) => {
                                 </td>
                                 <td className="border px-4 py-2">
                                   {offer.contactNum}
+                                </td>
+                                <td className="border px-4 py-2">
+                                  <button
+                                    onClick={() => handleChat()}
+                                    className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+                                  >
+                                    Chat
+                                  </button>
                                 </td>
                                 <td className="border px-4 py-2">
                                   <button

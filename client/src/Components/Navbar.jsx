@@ -52,7 +52,7 @@ const Navbar = ({ userStatus, setUserStatus, setProducts, allProducts }) => {
       {/* first div for the company title and logo */}
       <div className="bg-white w-full text-2xl col-span-2 lg:col-span-1 ">
         {/* this image later on will be replaced by the logo for the Campus Olx */}
-        <p className="inline-block ml-1.5">CampusOLX</p>
+        <p className="inline-block ml-1.5">CampusTrade</p>
       </div>
       {!screenSize && (
         <div className="invisible lg:visible col-span-1 lg:col-span-2 grid grid-cols-2">

@@ -94,7 +94,7 @@ exports.removeProduct = async (req, res) => {
     const mailOptions = {
       from: sellerEmail,
       to: buyerEmail,
-      subject: "Response to the offer on CampusOlx",
+      subject: "Response to the offer on CampusTrade",
       text:
         "This email is to confirm the sale of the product to you for payment and other details you can call at +" +
         contactNumSeller,

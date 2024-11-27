@@ -19,8 +19,14 @@ const Home = ({
       })
         .then((res) => res.json())
         .then((res) => {
-          setAllProducts(res.productData);
-          setProducts(res.productData);
+          const userEmail = localStorage.getItem("userEmail");
+          const products = res.productData.filter(
+            (product) => product.sellerEmail !== userEmail
+          );
+          setAllProducts(products);
+          setProducts(products);
+          console.log(products.sellerEmail);
+          console.log(products);
         });
     };
     getProductData();

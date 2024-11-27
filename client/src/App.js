@@ -6,6 +6,7 @@ import { Login } from "./Pages/Login";
 import { Home } from "./Pages/Home";
 import { Sell } from "./Pages/Sell";
 import { Offers } from "./Pages/Offers";
+import Chat from "./Pages/Chat";
 
 function App() {
   const [userStatus, setUserStatus] = useState(false);
@@ -73,6 +74,10 @@ function App() {
           setProducts={setProducts}
         />
       ),
+    },
+    {
+      path: "/chat",
+      element: <Chat />,
     },
   ]);
   return <RouterProvider router={router} />;
